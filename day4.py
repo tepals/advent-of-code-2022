@@ -1,3 +1,5 @@
+import time
+
 
 def part1(data):
     pairs = 0
@@ -21,7 +23,9 @@ def part2(data):
 
 if __name__ == '__main__':
     data = open('data-day4.txt', 'r').read()
+    t = time.time()
     total_part1 = part1(data.split("\n"))
+    print(time.time() - t)
     print(f"total_part1={total_part1}")
     total_part2 = part2(data.split("\n"))
     print(f"total_part2={total_part2}")
